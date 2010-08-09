@@ -15,3 +15,5 @@ module DisplayName
     end
   end
 end
+
+require 'display_name/active_record'
