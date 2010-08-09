@@ -9,7 +9,7 @@ begin
     gem.name = "display_name"
     gem.summary = %Q{Specify which method to use to display an object}
     gem.description = %Q{The automatic "to_s" and (for some form builders, for example)
-                       "display_name" methods display useful information about the record
+                       "display_name" methods display useful information about the record,
                         but not the prettiest one when you want to show it to the end user.
                         This gem allows you to easily display the object in a pretty way}
     gem.email = "elretirao@elretirao.net"
