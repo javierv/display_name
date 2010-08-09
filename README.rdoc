@@ -1,16 +1,24 @@
 = display_name
 
-Description goes here.
+Easily specify which method to use to display an object. It was created to work in Rails models, though it works with any Ruby class.
 
-== Note on Patches/Pull Requests
- 
-* Fork the project.
-* Make your feature addition or bug fix.
-* Add tests for it. This is important so I don't break it in a
-  future version unintentionally.
-* Commit, do not mess with rakefile, version, or history.
-  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
-* Send me a pull request. Bonus points for topic branches.
+== Install
+
+    gem install display_name
+
+== Usage
+
+    class Person < ActiveRecord::Base
+      display_name :full_name
+    end
+
+This will generate a method "display_name" for the record, which will return the full name. It will also override the "to_s" method, so in the view you could use:
+
+    <%= person %>
+
+That would automatically display the full name of the person. It also helps populating selects for lists of records.
+
+Note that the display_name can be any method, and not necessary a database column.
 
 == Copyright
 
